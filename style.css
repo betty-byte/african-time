@@ -1,7 +1,69 @@
+body {
+  background: rgb(198, 215, 230);
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 600px;
+  margin: 60px auto;
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
 h1 {
   text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: 900px;
+  color: darkslategrey;
+  font-size: 35px;
+  margin-bottom: 25px;
+}
+h2 {
+  margin: 0 0 10px;
+  font-size: 30px;
+  color: rgb(14, 118, 118);
+}
+.city {
+  display: flex;
+  margin: 10px 0;
+  justify-content: space-between;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+  padding: 20px 0;
+}
+.city:last-child {
+  border: none;
+}
+
+.date {
+  opacity: 0.5;
+}
+.time {
+  font-size: 30px;
+  font-weight: 900;
+  color: darkslategrey;
+}
+small {
+  font-size: 20px;
+  vertical-align: middle;
+}
+select {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  border-radius: 6px;
+  font-size: 14pt;
+  color: darkslategrey;
+  border: 2px solid rgb(14, 118, 118);
 }
 
 footer {
   text-align: center;
+  color: rgba(0, 0, 0, 0.7);
+}
+a {
+  color: darkslategrey;
+  font-weight: bold;
 }
