@@ -35,5 +35,27 @@ function moveAlong() {
   dagDateElement.innerHTML = moment().format("MMMM Do y");
   dagTimeElement.innerHTML = dagTime.format("hh:mm:ss [<small>]A[</small>]");
 }
+
+function differentCitizen(event) {
+  let cityTimeZone = event.target.value;
+  let cityName = cityTimeZone.split("/")[1];
+  let cityTime = moment().tz(cityTimeZone);
+  let citiesElement = document.querySelector("#cities");
+  citiesElement.innerHTML = `<div class="city" >
+          <div>
+            <h2>${cityName}</h2>
+            <div class="date">${cityTime.format("MMMM Do y")}</div>
+          </div>
+          <div>
+            <div class="time">${cityTime.format(
+              "hh:mm:ss [<small>]A[</small>]"
+            )}</div>
+          </div>
+        </div>`;
+}
+
 moveAlong();
 setInterval(moveAlong, 1000);
+
+let citiesSelectElement = document.querySelector("#city");
+citiesSelectElement.addEventListener("change", differentCitizen);
