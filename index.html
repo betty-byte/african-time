@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.47/moment-timezone-with-data-1970-2030.min.js"></script>
     <link rel="stylesheet" href="style.css" />
 
     <title>African-Time</title>
@@ -10,47 +12,50 @@
   <body>
     <div class="container">
       <h1>🕰️🐓 World Clock</h1>
-      <select>
+      <select id="city">
         <option value="">Select a city..</option>
-        <option value="">Cape-Town.. 🇿🇦🇿🇦</option>
-        <option value="">Doha..🇶🇦🇶🇦</option>
-        <option value="">Tokyo..🇯🇵🇯🇵</option>
-        <option value="">Mahe..🇸🇨🇸🇨</option>
+        <option value="Africa/Johannesburg">Johannesburg.. 🇿🇦🇿🇦</option>
+        <option value="Asia/Qatar">Doha..🇶🇦🇶🇦</option>
+        <option value="Asia/Tokyo">Tokyo..🇯🇵🇯🇵</option>
+        <option value="Indian/Mahe">Mahe..🇸🇨🇸🇨</option>
       </select>
-      <div class="city">
-        <div>
-          <h2>Pretoria 🇿🇦</h2>
-          <div class="date">August 15th 2022</div>
+
+      <div class="cities" id="cities">
+        <div class="city" id="pretoria">
+          <div>
+            <h2>Pretoria 🇿🇦</h2>
+            <div class="date" id="predate">15th 2022</div>
+          </div>
+          <div>
+            <div class="time" id="pretoria-time"><small>AM</small></div>
+          </div>
         </div>
-        <div>
-          <div class="time">1:48:15 <small>AM</small></div>
+        <div class="city" id="dodoma">
+          <div>
+            <h2>Nairobi 🇰🇪</h2>
+            <div class="date" id="date-doma"></div>
+          </div>
+          <div>
+            <div class="time" id="time-doma"></div>
+          </div>
         </div>
-      </div>
-      <div class="city">
-        <div>
-          <h2>Dodoma 🇹🇿</h2>
-          <div class="date">August 15th 2022</div>
+        <div class="city" id="beijing">
+          <div>
+            <h2>Costa Rica 🇺🇸</h2>
+            <div class="date" id="d-china"></div>
+          </div>
+          <div>
+            <div class="time" id="t-china"></div>
+          </div>
         </div>
-        <div>
-          <div class="time">1:48:15 <small>AM</small></div>
-        </div>
-      </div>
-      <div class="city">
-        <div>
-          <h2>Beijing 🇨🇳</h2>
-          <div class="date">August 15th 2022</div>
-        </div>
-        <div>
-          <div class="time">1:48:15 <small>AM</small></div>
-        </div>
-      </div>
-      <div class="city">
-        <div>
-          <h2>Antananarivo 🇲🇬</h2>
-          <div class="date">August 15th 2022</div>
-        </div>
-        <div>
-          <div class="time">1:48:15 <small>AM</small></div>
+        <div class="city" id="antananarivo">
+          <div>
+            <h2>Antananarivo 🇲🇬</h2>
+            <div class="date" id="antana-date"></div>
+          </div>
+          <div>
+            <div class="time" id="antana-time"></div>
+          </div>
         </div>
       </div>
     </div>
