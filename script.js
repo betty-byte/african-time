@@ -54,6 +54,9 @@ function differentCitizen(event) {
               "hh:mm:ss [<small>]A[</small>]"
             )}</div>
           </div>
+        </div> 
+        <div  class="all-liink">
+        <a href="index.html">Back to all cities<a>
         </div>`;
 }
 
