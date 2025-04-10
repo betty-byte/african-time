@@ -21,6 +21,9 @@ h1 {
   font-size: 35px;
   margin-bottom: 25px;
 }
+h1 a {
+  text-decoration: none;
+}
 h2 {
   margin: 0 0 10px;
   font-size: 30px;
